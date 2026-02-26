@@ -34,3 +34,14 @@ app.post('/users', (req, res) => {
   console.log(newUser);
   res.json({ message: 'User added successfully', user: newUser });
 });
+
+// GET route
+app.get('/greet', (req, res) => {
+  res.send("Hello, developer!");
+});
+
+// POST route
+app.post('/submit', (req, res) => {
+  const { name, age } = req.body;
+  res.send(`Hello, ${name}! You are ${age} years old.`);
+});
